@@ -21,9 +21,9 @@ class StreamDemo9 {
         // Получить сплитератор.
         Spliterator<String> splititr = myStream.spliterator();
         // Пройти по элементам в потоке.
-        while (splititr.tryAdvance((n) -> System.out.println(n))) ;
+//        while (splititr.tryAdvance((n) -> System.out.println(n))) ;
 
-//        splititr.forEachRemaining ( (n) -> System.out.println (n) );
+        splititr.forEachRemaining ( (n) -> System.out.println (n) );
 
     }
 }

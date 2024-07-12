@@ -44,7 +44,8 @@ class StreamDemo {
         // Отобразить только нечетные значения, которые больше 5.
         // Обратите внимание,
         // что две операции фильтрования соединены в конвейер.
-        oddVals = myList.stream().filter((n) -> (n % 2) == 1)
+        oddVals = myList.stream()
+                .filter((n) -> (n % 2) == 1)
                 .filter((n) -> n > 5);
         System.out.print("Нечетные значения, которые больше 5: ");
         oddVals.forEach((n) -> System.out.print(n + " "));

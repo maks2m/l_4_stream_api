@@ -1,6 +1,6 @@
 package com.example;
 
-// Демонстрация исполь зова ния объединяющей функции посредством reduce ( ) .
+// Демонстрация использования объединяющей функции посредством reduce ( ) .
 import java.util.* ;
 import java.util.stream.*;
 

@@ -3,6 +3,7 @@ package com.example;
 import com.example.dto.DepartmentDto;
 import com.example.dto.DocumentDto;
 import com.example.dto.EmployeeDto;
+import com.example.model.DepartmentModel;
 import com.example.util.ExampleUtils;
 
 import java.util.List;
@@ -16,5 +17,11 @@ public class TestApplication {
 
         // перевести объекты DTO в объекты Model используя стримы
         // вывести в консоль получившиеся коллекции объектов через toString() самих объектов
+
+        List<DepartmentModel> departmentModelList = deparnmentList.stream()
+                .map(dto -> DepartmentModel.builder().id(dto.getId()).nameDepartment(dto.getNameDepartment()).build())
+                .toList();
+        departmentModelList.forEach(System.out::println);
+
     }
 }
